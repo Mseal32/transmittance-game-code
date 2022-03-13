@@ -5,18 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class WinMenu : MonoBehaviour
 {
-    //singleton so other 
+    
     public static WinMenu Instance { get; private set; }
     public GameObject winMenu;
     public GameObject crossHair;
     public GameObject pasueMenu;
     public bool inWinMenu = false;
-
+    
+    
     private void Awake() {
         Instance = this;
     }
 
-    //should have this in a different script and call it here
+    //If the Player collides with the Win Object, stop the player from interacting with the game 
     private void OnTriggerStay(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
         Cursor.visible = true;
@@ -28,15 +29,8 @@ public class WinMenu : MonoBehaviour
         Time.timeScale = 0f;
     }
     }
-
-    public void LoadMenu() {
-        Time.timeScale = 1f;
-        inWinMenu = false;
-        winMenu.SetActive(false);
-        SceneManager.LoadScene("Menu");
-    }
-
-    //if next scene exists in build settings, load it. If not, load Menu
+    
+    //if next scene exists in build settings, load it. If not, loads the Menu
     public void NextStage() {
         if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
@@ -50,6 +44,16 @@ public class WinMenu : MonoBehaviour
         }
         
     }
+    
+    // if the Player wants to go back to the Main Menu, load it
+    public void LoadMenu() {
+        Time.timeScale = 1f;
+        inWinMenu = false;
+        winMenu.SetActive(false);
+        SceneManager.LoadScene("Menu");
+    }
+
+    
 
     public void QuitGame() {
         Application.Quit();
