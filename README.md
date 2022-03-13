@@ -1,5 +1,9 @@
-# transmittance-game-code
- 
- Hello! My name is Jason, and the reason for this github's existence is to publish the game code for my puzzle game, Transmittance. The journey of making this game has been an arduous, yet exhilarating and exciting one. I would like to thank the developers that take the time out of their lives, especially Brackeys and Code Monkey (you can find them on YouTube), to educate programming nobodies like myself entirely for free!
+# Transmittance
+## Why?
+Hello! My name is Jason, and the reason for this github's existence is to publish the code for my puzzle game, Transmittance. 
+Transmittance was made in 70 hours for a Senior Project required for me to graduate High School.
 
- If you're interested in trying my first foray into programming and game dev as whole, check out the prototype (Version 0.1) at https://mseal.itch.io/transmittance?secret=aUUQJIxCyJbAjFuT7DAj0pZUUk  
+## Game Overview
+The point of the game, much like other puzzle games, is to get from one point to another. What sets Transmittance apart from other puzzle games is the tool used to get from point A to point B. The player can place a marker on any surface that isn't their previously placed marker or anything that is tagged as interactable (more on that in a second). Then, the player can point a cursor at any interactable object (within a long range) and teleport it to their marker location. From there, the player can pick the object up and move it around as needed. 
+
+The player uses this tool to get over walls they can't jump, bridge gaps, and solve complex puzzles to get to the ending point!
